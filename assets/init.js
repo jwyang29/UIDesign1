@@ -47,6 +47,19 @@ $(document).ready(function() {
     //         'top' : event.pageY+10+'px'
     //     });
     // });
+<script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.querySelector(".openbtn").classList.add("hidden");
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.querySelector(".openbtn").classList.remove("hidden");
+    }
+</script>
 
 
 });

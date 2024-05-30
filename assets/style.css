@@ -14,7 +14,15 @@ body {
     background-color: #000; /* Black background */
     color: #fff; /* White text color */
     line-height: 1.6;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content */
+#main {
+    padding: 20px;
+    transition: margin-left .5s;
+    position: relative; /* Add this for positioning the button */
 }
 
 /* Heading style */
@@ -33,15 +41,60 @@ p.desc {
     text-align: center;
 }
 
-/* Horizontal rule style */
-hr {
-    margin: 20px 0;
+/* Button style */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: #ff69b4;
+    border: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+    position: absolute; /* Position the button absolutely */
+    top: 20px; /* Adjust the top position */
+    left: 20px; /* Adjust the left position */
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.openbtn.hidden {
+    display: none;
+}
+
+/* Sidebar style */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: #ff69b4; /* Pink color for the heading */
+    text-align: center;
+}
+
+.sidebar .desc {
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar hr {
     border: none;
     border-top: 2px solid #ff69b4; /* Pink border */
 }
 
-/* Details and summary style */
-details {
+.sidebar details {
     background-color: #333; /* Dark gray background for details */
     border: 1px solid #ff69b4; /* Pink border */
     border-radius: 5px;
@@ -50,44 +103,36 @@ details {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-summary {
+.sidebar summary {
     font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     color: #ff69b4; /* Pink color for summary */
 }
 
-details[open] {
+.sidebar details[open] {
     background-color: #444; /* Darker gray background when open */
 }
 
-/* List style */
-ul {
+.sidebar ul {
     list-style-type: none;
 }
 
-li {
+.sidebar li {
     margin: 10px 0;
 }
 
-/* Link style */
-a {
+.sidebar a {
     color: #ff69b4; /* Pink color for links */
     text-decoration: none;
     font-weight: bold;
 }
 
-a:hover {
+.sidebar a:hover {
     text-decoration: underline;
 }
 
-/* Paragraph inside details */
-details p {
-    margin: 10px 0 0 20px;
-}
-
-/* Image preview style */
-.project-preview {
+.sidebar .project-preview {
     display: block;
     margin: 10px auto;
     max-width: 100%;
@@ -96,4 +141,16 @@ details p {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: #ff69b4;
+}
+
 

@@ -9,34 +9,52 @@
 
 <body>
 
-  <h1>Jiwon Yang</h1>
-  <p class="desc">
-▶▶▶▶▶▶UI DESIGN PROJECT 2024-1▶▶▶▶▶▶                                                                        
-</p>
-  <hr>
+  <div id="main">
+    <h1>Jiwon Yang</h1>
+    <p class="desc">Hello World!</p>
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+  </div>
 
-  <details>
-    <summary>My Projects</summary>
-    
+  <div id="sidebar" class="sidebar">
+    <button class="closebtn" onclick="closeNav()">×</button>
     <details>
-      <summary>Project 0: ASCII TOWN</summary>
-      <ul>
-        <li><a href="ascii house.html">ASCII Town</a></li>
-      </ul>
+      <summary>My Projects</summary>
+
+      <details>
+        <summary>Project 0: ASCII TOWN</summary>
+        <ul>
+          <li><a href="ascii house.html">ASCII Town</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Project 1: Personal Utility</summary>
+        <p>UI DESIGN PROJECT 1: Personal Utility</p>
+      </details>
+
+      <details>
+        <summary>Project 2: Public Utility</summary>
+        <p>UI DESIGN PROJECT 1: Public Utility</p>
+      </details>
+
     </details>
-    
-    <details>
-      <summary>Project 1: Personal Utility</summary>
-      <p>UI DESIGN PROJECT 1: Personal Utility</p>
-    </details>
-    
-    <details>
-      <summary>Project 2: Public Utility</summary>
-      <p>UI DESIGN PROJECT 1: Public Utility</p>
-    </details>
-    
-  </details>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.querySelector(".openbtn").classList.add("hidden");
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.querySelector(".openbtn").classList.remove("hidden");
+    }
+  </script>
 
 </body>
 
 </html>
+
