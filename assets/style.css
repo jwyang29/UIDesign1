@@ -1,60 +1,99 @@
-* {
-	margin:  0px;
-	padding:  0px;
-	box-sizing: border-box;
+/* Add this at the top of your CSS file to import the font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+/* Reset some default browser styles */
+body, h1, p, details, summary, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* adjusting fonts */
-
+/* Body style */
 body {
-	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
-	transition: background 500ms ease;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    line-height: 1.6;
+    margin: 20px;
 }
 
-p, li {
-	font-size:  22px;
-	line-height: 30px;
+/* Heading style */
+h1 {
+    font-family: 'Rubik Mono One', sans-serif; /* Apply Rubik Mono One font */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ff69b4; /* Pink color for the heading */
+    text-align: center;
 }
 
-/* adjusting spacing */
-
-#left-column {
-	padding: 20px;
+/* Paragraph style */
+p.desc {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-h1, p {
-	margin-bottom:  20px;
+/* Horizontal rule style */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid #ff69b4; /* Pink border */
 }
 
-ul, ol {
-	margin-left: 20px;
+/* Details and summary style */
+details {
+    background-color: #333; /* Dark gray background for details */
+    border: 1px solid #ff69b4; /* Pink border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-img {
-	max-width: 100%;
-	height:  auto;
+summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff69b4; /* Pink color for summary */
 }
 
-/* uncomment the code below to set the grid */
-
-/*#grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+details[open] {
+    background-color: #444; /* Darker gray background when open */
 }
 
-body {
-	overflow: hidden;
+/* List style */
+ul {
+    list-style-type: none;
 }
 
-.scroll {
-	padding:  20px;
-	overflow: scroll;
-	height: 100vh;
+li {
+    margin: 10px 0;
 }
 
-#left-column {
+/* Link style */
+a {
+    color: #ff69b4; /* Pink color for links */
+    text-decoration: none;
+    font-weight: bold;
 }
 
-#right-column {
-	background: #333;
-}*/
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph inside details */
+details p {
+    margin: 10px 0 0 20px;
+}
+
+/* Image preview style */
+.project-preview {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ff69b4; /* Pink border */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
