@@ -153,4 +153,22 @@ p.desc {
     color: #ff69b4;
 }
 
+/* Style for the moving hearts */
+.heart {
+    position: absolute;
+    font-size: 32px; /* Adjust size as needed */
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
