@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Scheduler</title>
+    <link rel="stylesheet" href="schstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap">
+</head>
+<body>
+    <div class="landing-page">
+        <h1>Group Scheduler</h1>
+        <form id="user-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="color">Select your color:</label>
+            <div class="color-picker">
+                <input type="color" id="color" name="color" required>
+                <div id="color-display"></div>
+            </div>
+
+            <label for="group-size" id="group-size-label">Number of group members:</label>
+            <select id="group-size" name="group-size" required>
+                <option value="" disabled selected>Select group size</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <button type="submit">Join</button>
+        </form>
+    </div>
+    <div id="scheduler-container" style="display:none;">
+        <div class="header">
+            <div class="month-arrows">
+                <div id="prev-week" class="arrow">&lt;</div>
+                <div class="month">June 2023</div>
+                <div id="next-week" class="arrow">&gt;</div>
+            </div>
+        </div>
+        <div class="scheduler">
+            <div class="days" id="days-container"></div>
+            <div class="times" id="times-container"></div>
+        </div>
+        <div class="selected-times" id="selected-times-container">
+            <h3>Selected Times:</h3>
+            <ul id="selected-times-list"></ul>
+            <button id="save-button">Save</button>
+        </div>
+    </div>
+    <div id="result-container" style="display:none;">
+        <h1>Group Meeting Times</h1>
+        <ul id="group-meeting-times"></ul>
+    </div>
+    <script src="scheduler.js"></script>
+</body>
+</html>
+
+
+
+
+
+
